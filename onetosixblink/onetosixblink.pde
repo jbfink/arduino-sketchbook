@@ -16,6 +16,10 @@
  
   then pause for five seconds, repeat.
   
+  Things to investigate:
+  do..while loop (http://arduino.cc/en/Reference/DoWhile)
+  ++x increment (http://arduino.cc/en/Reference/Increment)
+  
  */
 
 void setup() {                
