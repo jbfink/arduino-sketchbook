@@ -27,19 +27,20 @@
  */
 
 int x;
+int ledPin = 13;
 
 void setup() {                
   // initialize the digital pin as an output.
   // Pin 13 has an LED connected on most Arduino boards:
-  pinMode(13, OUTPUT);     
+  pinMode(ledPin, OUTPUT);     
 }
 
 void loop() {
   x = random(1,7);
   do {
-  digitalWrite(13, HIGH);   // set the LED on
+  digitalWrite(ledPin, HIGH);   // set the LED on
   delay(250);              // wait for a bit
-  digitalWrite(13, LOW);    // set the LED off
+  digitalWrite(ledPin, LOW);    // set the LED off
   delay(250);              // wait for a bit
   --x;
   } while (x > 0);
