@@ -21,12 +21,12 @@
   ++x increment (http://arduino.cc/en/Reference/Increment)
   making your own functions (http://arduino.cc/en/Reference/FunctionDeclaration)
  
+ Hah! No function writing needed after all, although I probably should have done it
+ if only to learn. Works just great with a do..while loop, random, --x. Woohoo!
+ 
  */
 
 int x;
-int myNumerousBlinkings(int y) { 
-  // insert blink code here
-}
 
 void setup() {                
   // initialize the digital pin as an output.
@@ -36,8 +36,12 @@ void setup() {
 
 void loop() {
   x = random(1,7);
+  do {
   digitalWrite(13, HIGH);   // set the LED on
-  delay(1000);              // wait for a second
+  delay(250);              // wait for a bit
   digitalWrite(13, LOW);    // set the LED off
-  delay(1000);              // wait for a second
+  delay(250);              // wait for a bit
+  --x;
+  } while (x > 0);
+  delay(2500);
 }
