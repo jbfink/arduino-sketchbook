@@ -1,6 +1,6 @@
 /*
   Blink
-  Turns on an LED on for one second, then off for one second, repeatedly.
+  Turns on an LED on for a random short period, then off for a random short period, repeatedly.
  
   This example code is in the public domain.
   Adapted from Arduino blink example code by jbfink.
