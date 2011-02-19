@@ -20,10 +20,13 @@
   do..while loop (http://arduino.cc/en/Reference/DoWhile)
   ++x increment (http://arduino.cc/en/Reference/Increment)
   making your own functions (http://arduino.cc/en/Reference/FunctionDeclaration)
-  
+ 
  */
 
 int x;
+int myNumerousBlinkings(int y) { 
+  // insert blink code here
+}
 
 void setup() {                
   // initialize the digital pin as an output.
