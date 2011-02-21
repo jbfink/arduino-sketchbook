@@ -20,6 +20,11 @@
  A placeholder sketch to figure out how to incorporate random times in BlinkWithoutDelay
  with just pin13/onboard LED to save wear and tear on breadboard. :)
  
+ I think that no matter how often I power cycle the Arduino, the random()
+ call is only being called *once* -- even when I put it at the front of 
+ loop(). So the code in loop() is, uh, looping, and it's not calling
+ the front of loop() except at first load. Probably?
+ 
  This example code is in the public domain.
 
  
@@ -36,7 +41,7 @@ long previousMillis = 0;        // will store last time LED was updated
 
 // the follow variables is a long because the time, measured in miliseconds,
 // will quickly become a bigger number than can be stored in an int.
-long interval = random(100, 1000);           // interval at which to blink (milliseconds)
+//long interval = random(500, 15000);           // interval at which to blink (milliseconds)
 
 void setup() {
   // set the digital pin as output:
@@ -51,6 +56,7 @@ void loop()
   // difference between the current time and last time you blinked 
   // the LED is bigger than the interval at which you want to 
   // blink the LED.
+  long interval = random(500, 15000);
   unsigned long currentMillis = millis();
  
   if(currentMillis - previousMillis > interval) {
