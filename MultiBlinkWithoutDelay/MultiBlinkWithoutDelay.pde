@@ -44,9 +44,9 @@ long previousMillis3 = 0;
 
 // the follow variables is a long because the time, measured in miliseconds,
 // will quickly become a bigger number than can be stored in an int.
-long interval1 = 1000;           // interval at which to blink (milliseconds)
-long interval2 = 500;
-long interval3 = 2000;
+long interval1 = random(500, 1000);           // interval at which to blink (milliseconds)
+long interval2 = random(250, 500);
+long interval3 = random(1000, 2000);
 
 void setup() {
   // set the digital pin as output:
