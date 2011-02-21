@@ -1,4 +1,4 @@
-/* Blink without Delay
+/* Random Blink without Delay
  
  Turns on and off a light emitting diode(LED) connected to a digital  
  pin, without using the delay() function.  This means that other code
@@ -36,7 +36,7 @@ long previousMillis = 0;        // will store last time LED was updated
 
 // the follow variables is a long because the time, measured in miliseconds,
 // will quickly become a bigger number than can be stored in an int.
-long interval = 1000;           // interval at which to blink (milliseconds)
+long interval = random(100, 1000);           // interval at which to blink (milliseconds)
 
 void setup() {
   // set the digital pin as output:
