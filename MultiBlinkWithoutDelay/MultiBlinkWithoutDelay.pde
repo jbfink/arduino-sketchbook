@@ -16,7 +16,10 @@
  by John Fink
  
  jf sez - I'm trying to get three lights to blink on a breadboard, so I'm
- modifyin the stock BlinkWithoutDelay sketch to do it.
+ modifyin the stock BlinkWithoutDelay sketch to do it. It works, but the
+ next step is figuring out how to make interval1, interval2, interval3 random
+ -- probably means shifting them to inside loop(), as I have a sinking feeling
+ that having them be random outside loop() will not work.
  
  
  This example code is in the public domain.
