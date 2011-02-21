@@ -44,7 +44,7 @@ long previousMillis3 = 0;
 
 // the follow variables is a long because the time, measured in miliseconds,
 // will quickly become a bigger number than can be stored in an int.
-long interval1 = random(500, 1000);           // interval at which to blink (milliseconds)
+long interval1 = 10000;           // interval at which to blink (milliseconds)
 long interval2 = random(250, 500);
 long interval3 = random(1000, 2000);
 
@@ -63,8 +63,9 @@ void loop()
   // difference between the current time and last time you blinked 
   // the LED is bigger than the interval at which you want to 
   // blink the LED.
+  //putting random in loop. Let's see if it breaks!
+  interval1 = random(1000, 5000);
   unsigned long currentMillis1 = millis();
- 
   if(currentMillis1 - previousMillis1 > interval1) {
     // save the last time you blinked the LED 
     previousMillis1 = currentMillis1;   
@@ -77,6 +78,7 @@ void loop()
 
     // set the LED with the ledState of the variable:
     digitalWrite(ledPin1, ledState1);
+    interval1 = random(1000, 5000);
   }
   unsigned long currentMillis2 = millis();
   if(currentMillis2 - previousMillis2 > interval2) {
