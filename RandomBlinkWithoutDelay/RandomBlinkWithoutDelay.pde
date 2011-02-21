@@ -25,6 +25,9 @@
  loop(). So the code in loop() is, uh, looping, and it's not calling
  the front of loop() except at first load. Probably?
  
+ Added Serial to see the delay. always hovers around 500ms, wtf.
+ 
+ 
  This example code is in the public domain.
 
  
@@ -45,7 +48,8 @@ long previousMillis = 0;        // will store last time LED was updated
 
 void setup() {
   // set the digital pin as output:
-  pinMode(ledPin, OUTPUT);      
+  pinMode(ledPin, OUTPUT);
+  Serial.begin(9600);  
 }
 
 void loop()
@@ -71,6 +75,7 @@ void loop()
 
     // set the LED with the ledState of the variable:
     digitalWrite(ledPin, ledState);
+    Serial.println(interval);
   }
 }
 
