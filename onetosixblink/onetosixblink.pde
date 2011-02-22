@@ -28,15 +28,18 @@
 
 int x;
 int ledPin = 13;
+int originalx;
 
 void setup() {                
   // initialize the digital pin as an output.
   // Pin 13 has an LED connected on most Arduino boards:
   pinMode(ledPin, OUTPUT);     
+  Serial.begin(9600);
 }
 
 void loop() {
   x = random(1,7);
+  originalx = x;
   do {
   digitalWrite(ledPin, HIGH);   // set the LED on
   delay(250);              // wait for a bit
@@ -44,5 +47,6 @@ void loop() {
   delay(250);              // wait for a bit
   --x;
   } while (x > 0);
+  Serial.println(originalx);
   delay(2500);
 }
