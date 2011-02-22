@@ -9,7 +9,8 @@
 
 
 char choiceArray[] = {'R', 'P', 'S'};
-char choice;
+char choice1;
+char choice2;
 
 void setup() {
 Serial.begin(9600);
@@ -17,8 +18,11 @@ Serial.begin(9600);
 }
 
 void loop() {
-choice = choiceArray[random(0,3)];
+choice1 = choiceArray[random(0,3)];
+choice2 = choiceArray[random(0,3)];
 Serial.print("I picked: ");
-Serial.println(choice);
+Serial.println(choice1);
+Serial.print("You picked: ");
+Serial.println(choice2);
 delay(2000);
 }
