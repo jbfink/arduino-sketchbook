@@ -17,8 +17,8 @@ Serial.begin(9600);
 }
 
 void loop() {
-choice = choiceArray[random(0,2)];
+choice = choiceArray[random(0,3)];
 Serial.print("I picked: ");
 Serial.println(choice);
-delay(1000);
+delay(2000);
 }
