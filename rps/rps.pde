@@ -24,5 +24,8 @@ Serial.print("I picked: ");
 Serial.println(choice1);
 Serial.print("You picked: ");
 Serial.println(choice2);
+if (choice1 == choice2)
+{ Serial.println("We tied!");
+}
 delay(2000);
 }
