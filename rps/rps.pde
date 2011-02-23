@@ -12,8 +12,10 @@ char choiceArray[] = {
   'R', 'P', 'S'};
 char choice1;
 char choice2;
+int ledPin = 13;
 
 void setup() {
+  pinMode(ledPin, OUTPUT);
   Serial.begin(9600);
 
 }
@@ -40,10 +42,15 @@ void loop() {
   }
   else {
     Serial.println("I lost!");
+    digitalWrite(ledPin, HIGH);   // set the LED on
+    delay(1000);              // wait for a second
+    digitalWrite(ledPin, LOW);    // set the LED off
+    delay(1000);              // wait for a second  
   }
 
 
   delay(2000);
 }
+
 
 
