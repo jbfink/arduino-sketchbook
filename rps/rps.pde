@@ -13,9 +13,13 @@ char choiceArray[] = {
 char choice1;
 char choice2;
 int losePin = 13;
+int winPin = 12;
+int tiePin = 8;
 
 void setup() {
   pinMode(losePin, OUTPUT);
+  pinMode(winPin, OUTPUT);
+  pinMode(tiePin, OUTPUT);
   Serial.begin(9600);
 
 }
@@ -30,6 +34,10 @@ void loop() {
   if (choice1 == choice2)
   { 
     Serial.println("We tied!");
+    digitalWrite(tiePin, HIGH);
+    delay(500);
+    digitalWrite(tiePin, LOW);
+    delay(500);
   } 
   else if (choice1 == 'R' && choice2 == 'S') {
     Serial.println("I won!");
@@ -43,9 +51,9 @@ void loop() {
   else {
     Serial.println("I lost!");
     digitalWrite(losePin, HIGH);   // set the LED on
-    delay(1000);              // wait for a second
+    delay(500);              // wait for a second
     digitalWrite(losePin, LOW);    // set the LED off
-    delay(1000);              // wait for a second  
+    delay(500);              // wait for a second  
   }
 
 
