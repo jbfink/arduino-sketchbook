@@ -17,10 +17,10 @@ int winPin = 12;
 int tiePin = 8;
 void lightpin(int pin)
 {
-digitalWrite(pin, HIGH);
-    delay(500);
-    digitalWrite(pin, LOW);
-    delay(500);
+  digitalWrite(pin, HIGH);
+  delay(500);
+  digitalWrite(pin, LOW);
+  delay(500);
 }
 
 void setup() {
@@ -63,6 +63,7 @@ void loop() {
 
   delay(2000);
 }
+
 
 
 
