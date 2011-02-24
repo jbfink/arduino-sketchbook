@@ -43,15 +43,7 @@ void loop() {
     Serial.println("We tied!");
     lightpin(tiePin);
   } 
-  else if (choice1 == 'R' && choice2 == 'S') {
-    Serial.println("I won!");
-    lightpin(winPin);
-  }
-  else if (choice1 == 'P' && choice2 == 'R') {
-    Serial.println("I won!");
-    lightpin(winPin);
-  }
-  else if (choice1 == 'S' && choice2 == 'P') {
+  else if ((choice1 == 'R' && choice2 == 'S') || (choice1 == 'P' && choice2 == 'R') || (choice1 = 'S' && choice2 == 'P')) {
     Serial.println("I won!");
     lightpin(winPin);
   }
@@ -63,6 +55,7 @@ void loop() {
 
   delay(2000);
 }
+
 
 
 
