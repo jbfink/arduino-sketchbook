@@ -17,6 +17,10 @@ int winPin = 12;
 int tiePin = 8;
 void lightpin(int pin)
 {
+digitalWrite(pin, HIGH);
+    delay(500);
+    digitalWrite(pin, LOW);
+    delay(500);
 }
 
 void setup() {
@@ -37,26 +41,23 @@ void loop() {
   if (choice1 == choice2)
   { 
     Serial.println("We tied!");
-    digitalWrite(tiePin, HIGH);
-    delay(500);
-    digitalWrite(tiePin, LOW);
-    delay(500);
+    lightpin(tiePin);
   } 
   else if (choice1 == 'R' && choice2 == 'S') {
     Serial.println("I won!");
+    lightpin(winPin);
   }
   else if (choice1 == 'P' && choice2 == 'R') {
     Serial.println("I won!");
+    lightpin(winPin);
   }
   else if (choice1 == 'S' && choice2 == 'P') {
     Serial.println("I won!");
+    lightpin(winPin);
   }
   else {
     Serial.println("I lost!");
-    digitalWrite(losePin, HIGH);   // set the LED on
-    delay(500);              // wait for a second
-    digitalWrite(losePin, LOW);    // set the LED off
-    delay(500);              // wait for a second  
+    lightpin(losePin);
   }
 
 
