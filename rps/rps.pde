@@ -15,6 +15,9 @@ char choice2;
 int losePin = 13;
 int winPin = 12;
 int tiePin = 8;
+void lightpin(int pin)
+{
+}
 
 void setup() {
   pinMode(losePin, OUTPUT);
@@ -59,6 +62,7 @@ void loop() {
 
   delay(2000);
 }
+
 
 
 
