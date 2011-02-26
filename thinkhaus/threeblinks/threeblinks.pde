@@ -7,15 +7,16 @@
  This example code is in the public domain.
  */
 
+// Thor sez to change these values to something less stupid.
 const int pin1 = 10;
 const int pin2 = 11;
 const int pin3 = 12;
 
-void lightup(int pin) {
+void lightup(int pin, int interval) {
   digitalWrite(pin, HIGH);
-  delay(1000);
+  delay(interval);
   digitalWrite(pin, LOW);
-  delay(1000);
+  delay(interval);
 }
 
 
@@ -28,9 +29,9 @@ void setup() {
 }
 
 void loop() {
-  lightup(pin1);
-  lightup(pin2);
-  lightup(pin3);
+  lightup(pin1, 1000);
+  lightup(pin2, 1000);
+  lightup(pin3, 1000);
 }
 
 
