@@ -1,7 +1,7 @@
 /*
   Blink
  Turns on an LED on for one second, then off for one second, repeatedly.
-
+ 
  Rewritten for Thinkhaus class. The function was my take on it. Yours may differ.
  
  This example code is in the public domain.
@@ -32,4 +32,5 @@ void loop() {
   lightup(pin2);
   lightup(pin3);
 }
+
 
