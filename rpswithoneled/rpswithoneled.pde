@@ -1,6 +1,7 @@
 /*
   RPS, on the Arduino! Eventually!
  This is in the public domain. Go nuts.
+ This one uses the onboard LED and just pulses it a number of times for win, lose, tie.
  
  
  */
