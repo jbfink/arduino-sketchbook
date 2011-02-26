@@ -12,11 +12,11 @@ const int pin1 = 10;
 const int pin2 = 11;
 const int pin3 = 12;
 
-void lightup(int pin, int interval) {
+void lightup(int pin, int interval1, int interval2) {
   digitalWrite(pin, HIGH);
-  delay(interval);
+  delay(interval1);
   digitalWrite(pin, LOW);
-  delay(interval);
+  delay(interval2);
 }
 
 
@@ -25,13 +25,14 @@ void setup() {
   // Pin 13 has an LED connected on most Arduino boards:
   pinMode(pin1, OUTPUT);
   pinMode(pin2, OUTPUT);
-  pinMode(pin3, OUTPUT);  
+  // pinMode(pin3, OUTPUT);  
 }
 
 void loop() {
-  lightup(pin1, 1000);
-  lightup(pin2, 1000);
-  lightup(pin3, 1000);
+  lightup(pin1, 500, 500);
+  lightup(pin2, 500, 500);
+  // lightup(pin3, 1000);
 }
+
 
 
