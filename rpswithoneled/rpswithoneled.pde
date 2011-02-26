@@ -2,7 +2,8 @@
   RPS, on the Arduino! Eventually!
  This is in the public domain. Go nuts.
  This one uses the onboard LED and just pulses it a number of times for win, lose, tie.
- 
+ I should *definitely* be able to add another input variable to lightpin() so it can pulse numbers of times
+ rather than repeating. DRY, people.
  
  */
 
