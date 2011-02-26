@@ -12,9 +12,9 @@ char choiceArray[] = {
   'R', 'P', 'S'};
 char choice1;
 char choice2;
-int losePin = 13;
-int winPin = 12;
-int tiePin = 8;
+const int losePin = 13;
+const int winPin = 12;
+const int tiePin = 8;
 void lightpin(int pin)
 {
   digitalWrite(pin, HIGH);
