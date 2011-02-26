@@ -51,7 +51,7 @@ void loop() {
     Serial.println("I lost!");
     lightpin(losePin);
   }
-
+  Serial.println();
 
   delay(2000);
 }
