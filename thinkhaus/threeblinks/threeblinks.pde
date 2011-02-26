@@ -7,9 +7,9 @@
  This example code is in the public domain.
  */
 
-int pin1 = 10;
-int pin2 = 11;
-int pin3 = 12;
+const int pin1 = 10;
+const int pin2 = 11;
+const int pin3 = 12;
 
 void lightup(int pin) {
   digitalWrite(pin, HIGH);
