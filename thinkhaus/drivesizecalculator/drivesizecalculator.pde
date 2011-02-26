@@ -2,9 +2,11 @@
  *
  */
 
-int drive_gb = 5;
-int drive_mb;
-
+int drive_gb = 100;
+long drive_mb;
+// Note that this still breaks. That's because in the interim it's still using the int
+// We fix this by making the two numbers equal before we calculate
+// We could make two longs, but it takes up two extra bytes !!!
 void setup()
 
 {
@@ -13,8 +15,9 @@ void setup()
   Serial.print("Your HD is ");
   Serial.print(drive_gb);
   Serial.println(" GB Large.");
-
-  drive_mb = 1024 * drive_gb;
+  
+  drive_mb = drive_gb;
+  drive_mb = 1024 * drive_mb;
 
   Serial.print("It can store ");
   Serial.print(drive_mb);
