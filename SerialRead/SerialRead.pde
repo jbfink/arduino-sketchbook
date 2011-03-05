@@ -1,3 +1,9 @@
+/*
+ Note: I don't think I can shove the float directly from ruby sendload. I think we have to use a union
+ to assemble bytes into the float on the arduino side.
+ 
+*/
+
 float incomingByte = 0.00;	// for incoming serial data
 
 void setup() {
