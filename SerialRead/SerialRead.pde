@@ -4,7 +4,7 @@
  
 */
 
-float incomingByte = 0.00;	// for incoming serial data
+int incomingByte = 0;	// for incoming serial data
 
 void setup() {
 	Serial.begin(9600);	// opens serial port, sets data rate to 9600 bps
@@ -13,7 +13,7 @@ void setup() {
 void loop() {
 
 	// send data only when you receive data:
-	if (Serial.available() > 0.00) {
+	if (Serial.available() > 0) {
 		// read the incoming byte:
 		incomingByte = Serial.read();
 
