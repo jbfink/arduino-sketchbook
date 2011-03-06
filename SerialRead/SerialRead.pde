@@ -5,6 +5,13 @@
 */
 
 int incomingByte = 0;	// for incoming serial data
+float loadavg = 0.00;
+
+union u_tag {
+    byte b[4];
+    float loadavg;
+  } u;
+
 
 void setup() {
 	Serial.begin(9600);	// opens serial port, sets data rate to 9600 bps
@@ -19,6 +26,7 @@ void loop() {
 
 		// say what you got:
 		Serial.print("I received: ");
-		Serial.println(incomingByte);
-	}
+		Serial.println(incomingByte, DEC);
+                Serial.println(loadavg);	
+  }
 }
