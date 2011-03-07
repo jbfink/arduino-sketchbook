@@ -8,7 +8,7 @@ int incomingByte = 0;	// for incoming serial data
 float loadavg = 0.00;
 
 union u_tag {
-  byte b[4];
+  byte incomingByte[4];
   float fval;
 } 
 u;
@@ -19,6 +19,12 @@ void setup() {
 }
 
 void loop() {
+  union u_tag {
+    byte incomingByte[4];
+    float fval;
+  } 
+  u;
+
   u.fval = loadavg;
 
   // send data only when you receive data:
@@ -32,6 +38,7 @@ void loop() {
     Serial.println(loadavg);	
   }
 }
+
 
 
 
