@@ -19,13 +19,7 @@ void setup() {
 }
 
 void loop() {
-  union u_tag {
-    byte incomingByte[4];
-    float fval;
-  } 
-  u;
-
-  u.fval = loadavg;
+ 
 
   // send data only when you receive data:
   if (Serial.available() > 0) {
@@ -35,7 +29,7 @@ void loop() {
     // say what you got:
     Serial.print("I received: ");
     Serial.println(incomingByte, DEC);
-    Serial.println(loadavg);	
+
   }
 }
 
