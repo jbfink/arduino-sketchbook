@@ -10,12 +10,12 @@
 int incomingByte = 0;	// for incoming serial data
 float loadavg = 0.00;
 int gaugePin = 11;    // LED connected to digital pin 11
-union u_tag {
+/* union u_tag {
   byte b[2];
-  float ival;
+  int ival;
 } 
 u;
-
+*/
 
 void setup() {
   Serial.begin(9600);	// opens serial port, sets data rate to 9600 bps
@@ -32,9 +32,14 @@ void loop() {
      incomingByte = Serial.read();
      */
     //back to unions
-    u.b[0] = Serial.read();
-    u.b[1] = Serial.read();
-    incomingByte = u.ival;
+    // No!! fuck unions!
+    //   u.b[0] = Serial.read();
+    //  u.b[1] = Serial.read();
+    //   incomingByte = u.ival;
+// receiving site
+byte b1  = Serial.read();
+byte b2 =  Serial.read();
+incomingByte = ((int)b1) * 256 + b2;
 
     // say what you got:
     Serial.println();
@@ -43,9 +48,10 @@ void loop() {
     int normalized = map(incomingByte, 0, 500, 0, 40);
     Serial.print("Normalized, this is: ");
     Serial.println(normalized);
-    analogWrite(gaugePin, normalized);
+    //analogWrite(gaugePin, normalized);
   }
 }
+
 
 
 
