@@ -5,6 +5,7 @@
  Note 3: WORKS WORKS WORKS WORKS WORKS WORKS!!!
  Note 4: Well, maybe not. When load pops up on system, I don't think that sendload.rb is sending the right thing over. fruh.
  Note 5: At values >255, either ruby putc can't send them or Arduino can't read them. Not sure where to go now. Back to unions?
+ Note 6: btw, resistor on board is 10k +-5%. (brown/black/orange/gold)
  */
 
 int incomingByte = 0;	// for incoming serial data
