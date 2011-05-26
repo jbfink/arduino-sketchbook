@@ -7,6 +7,8 @@
  */
 
 // Arduino supports arrays but I don't think it supports hashes.
+#include "Wire.h"
+#include "BlinkM_funcs.h"
 
 
 char choiceArray[] = {
