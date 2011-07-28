@@ -52,9 +52,9 @@ void loop() {
   x = random(1,7);
   originalx = x;
   do {
-  digitalWrite(ledPin, HIGH);   // set the LED on
+  digitalWrite(ledPin, LOW);   // set the LED on (reversed here due to 7sd)
   delay(250);              // wait for a bit
-  digitalWrite(ledPin, LOW);    // set the LED off
+  digitalWrite(ledPin, HIGH);    // set the LED off (ditto)
   delay(250);              // wait for a bit
   --x;
   } while (x > 0);
