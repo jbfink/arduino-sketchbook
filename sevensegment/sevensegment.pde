@@ -7,7 +7,8 @@
  if digitalWrite is HIGH, that means the segment is OFF
  because there's no way for the signal to get to ground.
  (... I think?)
- 
+ 4 -- Yes! It works! Lookit all the pins I am adding. Hella inefficient to keep doing digitalWrites
+ I wonder if I can call digitalWrites on an array and set them all up to light up at once...       
  
  
  Random 1-6 blink
@@ -40,6 +41,7 @@
 int x;
 int ledPin = 13;
 int ledPin2 = 12;
+int ledPin3 = 11;
 int originalx;
 
 void setup() {                
@@ -47,6 +49,7 @@ void setup() {
   // Pin 13 has an LED connected on most Arduino boards:
   pinMode(ledPin, OUTPUT);     
   pinMode(ledPin2, OUTPUT);
+  pinMode(ledPin3, OUTPUT);
   Serial.begin(9600);
 }
 
@@ -56,9 +59,11 @@ void loop() {
   do {
     digitalWrite(ledPin, LOW);   // set the LED on (reversed here due to 7sd)
     digitalWrite(ledPin2, LOW);
+    digitalWrite(ledPin3, LOW);
     delay(250);              // wait for a bit
     digitalWrite(ledPin, HIGH);    // set the LED off (ditto)
     digitalWrite(ledPin2, HIGH);
+    digitalWrite(ledPin3, HIGH);
     delay(250);              // wait for a bit
     --x;
   } 
