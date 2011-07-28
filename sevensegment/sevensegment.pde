@@ -9,7 +9,7 @@
  (... I think?)
  4 -- Yes! It works! Lookit all the pins I am adding. Hella inefficient to keep doing digitalWrites
  I wonder if I can call digitalWrites on an array and set them all up to light up at once...       
- 
+ (yup -- see http://www.arduino.cc/en/Reference/Array and http://www.arduino.cc/en/Tutorial/KnightRider)
  
  Random 1-6 blink
  I want to have the Arduino LED blink 1-6 times, 
