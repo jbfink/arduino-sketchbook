@@ -42,6 +42,10 @@ int x;
 int ledPin = 13;
 int ledPin2 = 12;
 int ledPin3 = 11;
+int ledPin4 = 10;
+int ledPin5 = 9;
+int ledPin6 = 8;
+int ledPin7 = 7;
 int originalx;
 
 void setup() {                
@@ -50,6 +54,10 @@ void setup() {
   pinMode(ledPin, OUTPUT);     
   pinMode(ledPin2, OUTPUT);
   pinMode(ledPin3, OUTPUT);
+  pinMode(ledPin4, OUTPUT);
+  pinMode(ledPin5, OUTPUT);
+  pinMode(ledPin6, OUTPUT);
+  pinMode(ledPin7, OUTPUT);
   Serial.begin(9600);
 }
 
@@ -60,10 +68,18 @@ void loop() {
     digitalWrite(ledPin, LOW);   // set the LED on (reversed here due to 7sd)
     digitalWrite(ledPin2, LOW);
     digitalWrite(ledPin3, LOW);
+    digitalWrite(ledPin4, LOW);
+    digitalWrite(ledPin5, LOW);
+    digitalWrite(ledPin6, LOW);
+    digitalWrite(ledPin7, LOW);
     delay(250);              // wait for a bit
     digitalWrite(ledPin, HIGH);    // set the LED off (ditto)
     digitalWrite(ledPin2, HIGH);
     digitalWrite(ledPin3, HIGH);
+    digitalWrite(ledPin4, HIGH);
+    digitalWrite(ledPin5, HIGH);
+    digitalWrite(ledPin6, HIGH);
+    digitalWrite(ledPin7, HIGH);
     delay(250);              // wait for a bit
     --x;
   } 
