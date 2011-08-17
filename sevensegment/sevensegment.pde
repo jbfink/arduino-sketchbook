@@ -39,25 +39,25 @@
  */
 
 int x;
-int ledPin = 13;
-int ledPin2 = 12;
-int ledPin3 = 11;
-int ledPin4 = 10;
-int ledPin5 = 9;
-int ledPin6 = 8;
-int ledPin7 = 7;
+int ledPinA = 13;
+int ledPinB = 12;
+int ledPinC = 11;
+int ledPinD = 10;
+int ledPinE = 9;
+int ledPinF = 8;
+int ledPinG = 7;
 int originalx;
 
 void setup() {                
   // initialize the digital pin as an output.
   // Pin 13 has an LED connected on most Arduino boards:
-  pinMode(ledPin, OUTPUT);     
-  pinMode(ledPin2, OUTPUT);
-  pinMode(ledPin3, OUTPUT);
-  pinMode(ledPin4, OUTPUT);
-  pinMode(ledPin5, OUTPUT);
-  pinMode(ledPin6, OUTPUT);
-  pinMode(ledPin7, OUTPUT);
+  pinMode(ledPinA, OUTPUT);     
+  pinMode(ledPinB, OUTPUT);
+  pinMode(ledPinC, OUTPUT);
+  pinMode(ledPinD, OUTPUT);
+  pinMode(ledPinE, OUTPUT);
+  pinMode(ledPinF, OUTPUT);
+  pinMode(ledPinG, OUTPUT);
   Serial.begin(9600);
 }
 
@@ -65,21 +65,21 @@ void loop() {
   x = random(1,7);
   originalx = x;
   do {
-    digitalWrite(ledPin, LOW);   // set the LED on (reversed here due to 7sd)
-    digitalWrite(ledPin2, LOW);
-    digitalWrite(ledPin3, LOW);
-    digitalWrite(ledPin4, LOW);
-    digitalWrite(ledPin5, LOW);
-    digitalWrite(ledPin6, LOW);
-    digitalWrite(ledPin7, LOW);
+    digitalWrite(ledPinA, LOW);   // set the LED on (reversed here due to 7sd)
+    digitalWrite(ledPinB, LOW);
+    digitalWrite(ledPinC, LOW);
+    digitalWrite(ledPinD, LOW);
+    digitalWrite(ledPinE, LOW);
+    digitalWrite(ledPinF, LOW);
+    digitalWrite(ledPinG, LOW);
     delay(250);              // wait for a bit
-    digitalWrite(ledPin, HIGH);    // set the LED off (ditto)
-    digitalWrite(ledPin2, HIGH);
-    digitalWrite(ledPin3, HIGH);
-    digitalWrite(ledPin4, HIGH);
-    digitalWrite(ledPin5, HIGH);
-    digitalWrite(ledPin6, HIGH);
-    digitalWrite(ledPin7, HIGH);
+    digitalWrite(ledPinA, HIGH);    // set the LED off (ditto)
+    digitalWrite(ledPinB, HIGH);
+    digitalWrite(ledPinC, HIGH);
+    digitalWrite(ledPinD, HIGH);
+    digitalWrite(ledPinE, HIGH);
+    digitalWrite(ledPinF, HIGH);
+    digitalWrite(ledPinG, HIGH);
     delay(250);              // wait for a bit
     --x;
   } 
