@@ -46,7 +46,6 @@ int ledPinD = 10;
 int ledPinE = 9;
 int ledPinF = 8;
 int ledPinG = 7;
-int originalx;
 
 void setup() {                
   // initialize the digital pin as an output.
@@ -62,29 +61,32 @@ void setup() {
 }
 
 void loop() {
-  x = random(1,7);
-  originalx = x;
-  do {
-    digitalWrite(ledPinA, LOW);   // set the LED on (reversed here due to 7sd)
-    digitalWrite(ledPinB, LOW);
-    digitalWrite(ledPinC, LOW);
-    digitalWrite(ledPinD, LOW);
-    digitalWrite(ledPinE, LOW);
-    digitalWrite(ledPinF, LOW);
-    digitalWrite(ledPinG, LOW);
-    delay(250);              // wait for a bit
-    digitalWrite(ledPinA, HIGH);    // set the LED off (ditto)
-    digitalWrite(ledPinB, HIGH);
-    digitalWrite(ledPinC, HIGH);
-    digitalWrite(ledPinD, HIGH);
-    digitalWrite(ledPinE, HIGH);
-    digitalWrite(ledPinF, HIGH);
-    digitalWrite(ledPinG, HIGH);
-    delay(250);              // wait for a bit
-    --x;
-  } 
-  while (x > 0);
-  Serial.println(originalx);
-  delay(2500);
-}
+
+
+
+  digitalWrite(ledPinA, HIGH);    // set the LED off (ditto)
+  digitalWrite(ledPinB, HIGH);
+  digitalWrite(ledPinC, HIGH);
+  digitalWrite(ledPinD, HIGH);
+  digitalWrite(ledPinE, HIGH);
+  digitalWrite(ledPinF, HIGH);
+  digitalWrite(ledPinG, HIGH);
+  delay(250);              // wait for a bit
+  digitalWrite(ledPinA, LOW);   // set the LED on (reversed here due to 7sd)
+  digitalWrite(ledPinB, LOW);
+  //digitalWrite(ledPinC, LOW);
+  digitalWrite(ledPinD, LOW);
+  digitalWrite(ledPinE, LOW);
+  //digitalWrite(ledPinF, LOW);
+  digitalWrite(ledPinG, LOW);
+  delay(250);              // wait for a bit
+} 
+
+
+
+
+
+
+
+
 
