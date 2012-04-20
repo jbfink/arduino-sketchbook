@@ -1,0 +1,21 @@
+13 to pin segment, ground to ground.
+pinout for active surplus two segment. Where notched corner is pin 1:
+pin 5: ground 
+pin 20: middle 
+pin 19: top 
+pin 18: top left 
+pin 17: top right 
+pin 1: dot
+pin 2: bottom right
+pin 3: bottom left
+pin 4: bottom 
+- second digit
+pin 6: ground
+pin 7: bottom 
+pin 8: bottom left
+pin 9: bottom right
+pin 10: dot
+pin 11: middle 
+pin 12: top 
+pin 13: top left
+pin 14: top right
